@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@layer utilities {
+  .scrollbar-transparent {
+    scrollbar-color: transparent transparent; 
+  }
+
+  .scrollbar-transparent::-webkit-scrollbar {
+    width: 62px;
+    height: 8px;
+  }
+  
+
+  .scrollbar-transparent::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+    border-radius: 6px;
+  }
+
+  .scrollbar-transparent:hover {
+    scrollbar-color: rgba(100, 100, 100, 0.6) transparent; 
+  }
+
+  .scrollbar-transparent:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.6); 
+  }
+  .scrollbar-button {
+  display: none;
+}
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
