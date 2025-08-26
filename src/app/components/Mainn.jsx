@@ -8,7 +8,7 @@ export default function Main({ searchTerm }) {
     const [currentTrack, setCurrentTrack] = useState(null);
     const [audio, setAudio] = useState(null);
     const [isPlayingMusica, setIsPlayingMusica] = useState(false);
-
+    
     useEffect(() => {
         const fetchMusica = async () => {
             try {
@@ -143,7 +143,11 @@ export default function Main({ searchTerm }) {
                             <div>
                                 <p className="font-medium text-lg text-white font-bold">{currentTrack.name}</p>
                                 <p className="text-neutral-400 font-medium text-sm">{currentTrack.album.artists[0].name}</p>
+                                
                             </div>
+                            <button>
+                                    <img src="/add.svg" alt="añadir" className="filter invert-[10]"  width={20} height={20}/>
+                                </button>
                         </div>
 
                         <div className="relative flex items-center space-x-4">

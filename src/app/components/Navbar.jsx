@@ -89,7 +89,7 @@ export default function Navbar({ onSearchChange }) {
           className="cursor-pointer"
           onClick={() => setMenuOpened(!menuOpened)}
         >
-         
+
           <img
             src="/hamburger.svg"
             alt="Menu"
@@ -132,17 +132,7 @@ export default function Navbar({ onSearchChange }) {
             </div>
           ) : (
             <div className="mt-10 space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center">
-
-                  <img
-                    src={user.photoURL}
-                    alt="Profile"
-                    className="w-full h-full rounded-full object-cover"
-                  />
-                </div>
-
-              </div>
+              
               <button
                 onClick={handleSignOut}
                 className="block w-full text-left text-red-400 font-semibold"
@@ -172,7 +162,7 @@ export default function Navbar({ onSearchChange }) {
           <div className="flex items-center space-x-3">
             <div className="flex items-center space-x-2 bg-neutral-800 p-2 rounded-full">
               <div className="relative w-8 h-8 bg-gray-500 rounded-full flex cursor-pointer items-center justify-center">
-                <button onClick={() =>{setPerfilOpened(!perfilOpened) }}>
+                <button onClick={() => { setPerfilOpened(!perfilOpened) }}>
                   {user.photoURL ? (
                     <img
                       src={user.photoURL}
