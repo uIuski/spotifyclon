@@ -5,8 +5,8 @@ import { getMusica } from "../services/musicService.js";
 export default function Main({ searchTerm }) {
     const [musica, setMusica] = useState({ tracks: [], artists: [] });
     const [filteredMusica, setFilteredMusica] = useState({ tracks: [], artists: [] });
-    const [currentTrack, setCurrentTrack] = useState(null);
-    const [audio, setAudio] = useState(null);
+    const [currentTrack, setCurrentTrack] = useState();
+    const [audio, setAudio] = useState();
     const [isPlayingMusica, setIsPlayingMusica] = useState(false);
     
     useEffect(() => {
@@ -56,7 +56,7 @@ export default function Main({ searchTerm }) {
         });
         newAudio.onended = () => {
             setIsPlayingMusica(false);
-            setCurrentTrack(null);
+            setCurrentTrack();
         };
     };
     const stopMusica = () => {
@@ -64,7 +64,7 @@ export default function Main({ searchTerm }) {
             audio.pause();
             audio.currentTime = 0;
             setIsPlayingMusica(false);
-            setCurrentTrack(null);
+            setCurrentTrack();
         }
     };
 

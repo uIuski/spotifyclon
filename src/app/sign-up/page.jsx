@@ -37,10 +37,10 @@ export default function SignUp() {
             const result = await createUserWithEmailAndPassword(email, password);
             if (result) {
                 await sendEmailVerification();
-                console.log("Account created successfully");
+                console.log("Cuenta creada exitosament");
             }
         } catch (error) {
-            console.error("Error creating account:", error);
+            console.error("Error:", error);
         }
     };
 

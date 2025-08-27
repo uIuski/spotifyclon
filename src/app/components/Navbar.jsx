@@ -162,19 +162,7 @@ export default function Navbar({ onSearchChange }) {
           <div className="flex items-center space-x-3">
             <div className="flex items-center space-x-2 bg-neutral-800 p-2 rounded-full">
               <div className="relative w-8 h-8 bg-gray-500 rounded-full flex cursor-pointer items-center justify-center">
-                <button onClick={() => { setPerfilOpened(!perfilOpened) }}>
-                  {user.photoURL ? (
-                    <img
-                      src={user.photoURL}
-                      alt="Profile"
-                      className="w-full h-full rounded-full object-cover"
-                    />
-                  ) : (
-                    <span className="text-white font-semibold text-sm">
-                      {user.email?.charAt(0).toUpperCase()}
-                    </span>
-                  )}
-                </button>
+                
               </div>
             </div>
             {perfilOpened && (
@@ -191,7 +179,24 @@ export default function Navbar({ onSearchChange }) {
           </div>
         )}
       </div>
-
+  <div className="fixed bottom-0 left-0 w-full bg-neutral-900 p-3 md:hidden">
+  <div className="flex items-center gap-2 bg-neutral-800 rounded-full px-3 py-2">
+    <img
+      src="/search.svg"
+      alt="Search"
+      width={20}
+      height={20}
+      className="filter invert-[70%]"
+    />
+    <input
+      type="text"
+      className="flex-1 bg-transparent border-none outline-none text-white placeholder-gray-400"
+      placeholder="¿Qué quieres reproducir?"
+      value={searchTerm}
+      onChange={handleSearchChange}
+    />
+  </div>
+</div>
     </nav>
   );
 }

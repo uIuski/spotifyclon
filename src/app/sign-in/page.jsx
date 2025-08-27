@@ -32,10 +32,10 @@ export default function SignIn() {
     try {
       const result = await signInWithEmailAndPassword(email, password);
       if (result) {
-        console.log("Login successful");
+        console.log("Exitoso");
       }
     } catch (error) {
-      console.error("Error signing in:", error);
+      console.error("Error:", error);
     }
   };
 
