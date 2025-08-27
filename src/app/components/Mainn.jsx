@@ -69,7 +69,7 @@ export default function Main({ searchTerm }) {
     };
 
     return (
-        <div className="w-3/4 h-full overflow-y-auto scroll-area bg-neutral-950 rounded-xl scrollbar-hidden scrollbar-hover scrollbar-transparent">
+        <div className="w-full md:3/4 h-full overflow-y-auto scroll-area bg-neutral-950 rounded-xl scrollbar-hidden scrollbar-hover scrollbar-transparent">
             <section className="flex flex-col gap-4 p-4">
                 <h1 className="text-2xl text-white font-bold mb-4">
                     Canciones del momento
