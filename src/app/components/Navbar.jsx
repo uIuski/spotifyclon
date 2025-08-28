@@ -267,7 +267,7 @@ export default function Navbar({ onSearchChange }) {
       )}
 
     
-      <div className="fixed bottom-0 left-0 w-full bg-black p-3 md:hidden border-t border-neutral-800">
+      <div className="fixed bottom-0 left-0 w-full bg-black p-3 md:hidden border-t ">
         <div className="flex justify-center">
           <button
             onClick={openMobileSearch}
